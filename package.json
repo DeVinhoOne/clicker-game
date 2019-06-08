@@ -31,6 +31,7 @@
     "webpack-dev-server": "^3.7.0"
   },
   "dependencies": {
+    "querystringify": "^2.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sass": "^1.21.0"
