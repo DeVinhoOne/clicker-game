@@ -7,9 +7,12 @@ import Badge from '../../UI/Badge/Badge';
 const MenuItem = props => {
    return (
       <div className={classes.menuItem}>
-         <Badge />
+         <Badge amount={props.amount} />
          <p className={classes.name}>{props.name}</p>
-         <Button type="price">$11,50</Button>
+         <Button
+            buyHandler={props.buyHandler}
+            type="price"
+         >${props.price}</Button>
       </div>
    );
 }

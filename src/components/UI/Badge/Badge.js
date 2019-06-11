@@ -2,8 +2,8 @@ import React from 'react';
 
 import classes from './Badge.scss';
 
-const Badge = () => (
-   <div className={classes.badge}>999</div>
+const Badge = props => (
+   <div className={classes.badge}>{props.amount}</div>
 )
 
 export default Badge;

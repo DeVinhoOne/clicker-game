@@ -3,15 +3,19 @@ import React from 'react';
 import classes from './Menu.scss';
 import MenuItem from './MenuItem/MenuItem';
 
-const Menu = () => {
+const Menu = props => {
    return (
-      <div className={classes.menu}>
-         <MenuItem name="Iron" />
-         <MenuItem name="Silver" />
-         <MenuItem name="Platinium" />
-         <MenuItem name="Gold" />
-         <MenuItem name="Diamond" />
-      </div>
+      <div className={classes.menu} >
+         {props.materials.map(material => (
+            <MenuItem
+               key={material.name}
+               name={material.name}
+               price={material.price}
+               amount={material.amount}
+               buyHandler={() => props.buyHandler(material.name)}
+            />
+         ))}
+      </div >
    );
 }
 

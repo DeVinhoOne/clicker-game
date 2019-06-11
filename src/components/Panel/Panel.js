@@ -6,9 +6,9 @@ import moneybag from '../../assets/svg/money-bag.svg';
 const Panel = props => {
    return (
       <div className={classes.wrapper}>
-         <h1>${props.money}</h1>
+         <h1>${(props.money).toFixed(2)}</h1>
          <img onClick={props.click} src={moneybag} alt="moneybag" />
-         <p>${props.moneyPerSecond} per second</p>
+         <p>${(props.moneyPerSecond).toFixed(2)} per second</p>
       </div>
    );
 }
