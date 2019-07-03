@@ -20,25 +20,25 @@ class ClickerGame extends Component {
             name: 'Silver',
             amount: 0,
             price: 500.00,
-            multiplier: 1.5
+            multiplier: 3
          },
          {
             name: 'Platinium',
             amount: 0,
             price: 2500.00,
-            multiplier: 2
+            multiplier: 7
          },
          {
             name: 'Gold',
             amount: 0,
             price: 10000.00,
-            multiplier: 3
+            multiplier: 12
          },
          {
             name: 'Diamond',
             amount: 0,
             price: 95000.00,
-            multiplier: 5
+            multiplier: 20
          },
       ]
    }
@@ -57,13 +57,12 @@ class ClickerGame extends Component {
          const currentPrice = this.state.materials[index].price;
          console.log(updatedMaterials);
          updatedMaterials[index].amount++;
-         updatedMaterials[index].price = (updatedMaterials[index].price * 1.2).toFixed(2);
+         updatedMaterials[index].price = updatedMaterials[index].price * 1.2;
          this.setState(prevState => ({
             currentMoney: prevState.currentMoney - currentPrice,
             moneyPerSecond: (prevState.moneyPerSecond + updatedMaterials[index].multiplier),
             materials: updatedMaterials
          }))
-
       }
    }
 

@@ -1,3 +1,12 @@
+@keyframes rotating {
+   from {
+      transform: rotate(-12deg);
+   }
+   to {
+      transform: rotate(12deg);
+   }
+}
+
 .wrapper {
    position: absolute;
    top: 172px;
@@ -14,6 +23,7 @@
    }
    img {
       cursor: pointer;
+      animation: rotating 1s both infinite alternate ease-in-out;
    }
    p {
       font-size: 18px;

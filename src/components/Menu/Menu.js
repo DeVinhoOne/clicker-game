@@ -10,7 +10,7 @@ const Menu = props => {
             <MenuItem
                key={material.name}
                name={material.name}
-               price={material.price}
+               price={(material.price).toFixed(2)}
                amount={material.amount}
                buyHandler={() => props.buyHandler(material.name)}
             />
